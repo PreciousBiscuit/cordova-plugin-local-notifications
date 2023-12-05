@@ -1,6 +1,7 @@
 ### Notes about this fork
 
-- This is a merge of [@timkellypa](https://github.com/timkellypa/cordova-plugin-local-notifications), [@bhandaribhumin](https://github.com/bhandaribhumin/cordova-plugin-local-notification-12), [@powowbox](https://github.com/powowbox/cordova-plugin-local-notification-12) and my own fixes.
+- WARNING: This fork uses USE_EXACT_ALARM permission that is required for Android 14. However Play Store requires very strong use case of it's usage, otherwise the app will get declined.
+- This is a merge of [@timkellypa](https://github.com/timkellypa/cordova-plugin-local-notifications), [@bhandaribhumin](https://github.com/bhandaribhumin/cordova-plugin-local-notification-12), [@powowbox](https://github.com/powowbox/cordova-plugin-local-notification-12) and [@fquirin](https://github.com/fquirin/cordova-plugin-local-notifications) fixes with my own fix for missing permission.
 - If the app's in background and the 'triggerInApp' option is set to 'true', there is no way to show to users a new notification since the notification is not displayed in the notification center and the app is not visible. 
   - <b>Fix</b>: if the app's running in background, display the notification in the notification center.
 - If the notification is scheduled / canceled / scheduled with the same id, the notification triggers twice.
